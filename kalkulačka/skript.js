@@ -1,26 +1,82 @@
 function cislo(num)
 {
-
-    if(num == 11)
+    if(num == -20)
     {
+        document.getElementById("display3").innerHTML = document.getElementById("display").innerHTML;
+        document.getElementById("display2").innerHTML = "+";
         document.getElementById("display").innerHTML = "";
     }
     else
-    {   
-        if(num == -11)
+    {
+        if(num == -23)
         {
-            document.getElementById("display").innerHTML = x;
+            document.getElementById("display3").innerHTML = document.getElementById("display").innerHTML;
+            document.getElementById("display2").innerHTML = "-";
+            document.getElementById("display").innerHTML = "";
         }
         else
         {
-                x = document.getElementById("display").innerHTML;
-
-        
-                x = x * 10;
-                x = x + num;
-        
-                document.getElementById("display").innerHTML = document.getElementById("display").innerHTML + num ;
+            if(num == -21)
+        {
+            document.getElementById("display").innerHTML = "";
+            document.getElementById("display2").innerHTML = "";
+            document.getElementById("display3").innerHTML = "";
         }
+        else
+        {   
+            if(num == -22)
+            {
+                if(document.getElementById("display2").innerHTML == "+")
+                {
+                    var x = document.getElementById("display3").innerHTML;
+                    x = x * 1;
+                    
+                    var y = document.getElementById("display").innerHTML;
+                    y = y * 1;
+
+                    var z = x + y;
+
+                    document.getElementById("display").innerHTML = z;
+
+                    document.getElementById("display3").innerHTML = "";
+                    document.getElementById("display2").innerHTML = "";
+
+                }
+                else
+                {
+                }
+
+                if(document.getElementById("display2").innerHTML == "-")
+                {
+                    var x = document.getElementById("display3").innerHTML;
+                    x = x * 1;
+                    
+                    var y = document.getElementById("display").innerHTML;
+                    y = y * 1;
+
+                    var z = x - y;
+
+                    document.getElementById("display").innerHTML = z;
+
+                    document.getElementById("display3").innerHTML = "";
+                    document.getElementById("display2").innerHTML = "";
+
+                }
+            }
+            else
+            {
+                    x = document.getElementById("display").innerHTML;
+    
+            
+                    x = x * 10;
+                    x = x + num;
+            
+                    document.getElementById("display").innerHTML = x ;
+            }
+            
+        }
+        }
+
         
     }
 
@@ -29,9 +85,6 @@ function cislo(num)
 function odeslat()
 {
     let data = document.getElementById("cis").innerHTML;
-    
-    if(data.trim().length == 0)
-        return;
     
     // AJAX
     let xhr = new XMLHttpRequest();

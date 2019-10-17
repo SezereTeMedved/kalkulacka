@@ -12,14 +12,22 @@
 <body>
     <table>
         <tr>
+            <td id="display3" colspan="4"></td>
+        </tr>
+
+        <tr>
+            <td id="display2" colspan="4"></td>
+        </tr>
+
+        <tr>
             <td id="display" colspan="4"></td>
         </tr>
 
         <tr>
-            <td id="cislo" onmousedown="cislo()">CE</td>
-            <td id="cislo" onmousedown="cislo(11)">C</td>
-            <td id="cislo" onmousedown="cislo()">DELETE</td>
-            <td id="cislo" onmousedown="cislo()">/</td>
+            <td  id="cislo"><button id="cis" onclick="cislo(CE)">CE</button></td>
+            <td  id="cislo"><button id="cis" onclick="cislo(-21)">C</button></td>
+            <td  id="cislo"><button id="cis" onclick="cislo(DELETE)">DELETE</button></td>
+            <td  id="cislo"><button id="cis" onclick="cislo()">/</button></td>
         </tr>
 
         <tr>
@@ -32,19 +40,19 @@
             <td  id="cislo"><button id="cis" onclick="cislo(4)">4</button></td>
             <td  id="cislo"><button id="cis" onclick="cislo(5)">5</button></td>
             <td  id="cislo"><button id="cis" onclick="cislo(6)">6</button></td>
-            <td >-</td>
+            <td  id="cislo"><button id="cis" onclick="cislo(-23)">-</button></td>
         </tr>
         <tr>
             <td  id="cislo"><button id="cis" onclick="cislo(1)">1</button></td>
             <td  id="cislo"><button id="cis" onclick="cislo(2)">2</button></td>
             <td  id="cislo"><button id="cis" onclick="cislo(3)">3</button></td>
-            <td>+</td>
+            <td  id="cislo"><button id="cis" onclick="cislo(-20)">+</button></td>
         </tr>
         <tr>
             <td></td>
             <td  id="cislo"><button id="cis" onclick="cislo(0)">0</button></td>
             <td></td>
-            <td id="cislo" onmousedown="cislo(-11)">=</td>
+            <td  id="cislo"><button id="cis" onclick="cislo(-22)">=</button></td>
         </tr>
     </table>
 </body>
