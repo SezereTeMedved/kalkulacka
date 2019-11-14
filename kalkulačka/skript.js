@@ -57,100 +57,185 @@ function cislo(num)
                                 }
                                 else
                                 {
-                                    if(num == -22)
+                                    if(num == -28)
                                     {
-                
-                                        if(document.getElementById("display2").innerHTML == "+")
-                                        {
-                                            var x = document.getElementById("display3").innerHTML;
-                                            x = x * 1;
-                                            
-                                            var y = document.getElementById("display").innerHTML;
-                                            y = y * 1;
-                        
-                                            var z = x + y;
-                        
-                                            document.getElementById("display").innerHTML = z;
-                        
-                                            document.getElementById("display3").innerHTML = "";
-                                            document.getElementById("display2").innerHTML = "";
-                        
-                                        }
-                                        else
-                                        {
-                
-                                        }
-                        
-                                        if(document.getElementById("display2").innerHTML == "-")
-                                        {
-                                            var x = document.getElementById("display3").innerHTML;
-                                            x = x * 1;
-                                            
-                                            var y = document.getElementById("display").innerHTML;
-                                            y = y * 1;
-                        
-                                            var z = x - y;
-                        
-                                            document.getElementById("display").innerHTML = z;
-                        
-                                            document.getElementById("display3").innerHTML = "";
-                                            document.getElementById("display2").innerHTML = "";
-                        
-                                        }
-                        
-                                        if(document.getElementById("display2").innerHTML == "*")
-                                        {
-                                            var x = document.getElementById("display3").innerHTML;
-                                            x = x * 1;
-                                            
-                                            var y = document.getElementById("display").innerHTML;
-                                            y = y * 1;
-                        
-                                            var z = x * y;
-                        
-                                            document.getElementById("display").innerHTML = z;
-                        
-                                            document.getElementById("display3").innerHTML = "";
-                                            document.getElementById("display2").innerHTML = "";
-                        
-                                        }
-                                        else
-                                        {
-                        
-                                        }
-                        
-                                        if(document.getElementById("display2").innerHTML == "/")
-                                        {
-                                            var x = document.getElementById("display3").innerHTML;
-                                            x = x * 1;
-                                            
-                                            var y = document.getElementById("display").innerHTML;
-                                            y = y * 1;
-                        
-                                            var z = x / y;
-                        
-                                            document.getElementById("display").innerHTML = z;
-                        
-                                            document.getElementById("display3").innerHTML = "";
-                                            document.getElementById("display2").innerHTML = "";
-                        
-                                        }
-                                        else
-                                        {
-                                            
-                                        }
+                                        d1 = document.getElementById("display").innerHTML;
+                                        d3 = document.getElementById("display3").innerHTML;
+
+                                        d1 = d3 / 100 * d1;
+
+                                        document.getElementById("display").innerHTML = d;
                                     }
                                     else
                                     {
-                                            x = document.getElementById("display").innerHTML;
-                            
-                                    
-                                            x = x * 10;
-                                            x = x + num;
-                                    
-                                            document.getElementById("display").innerHTML = x ;
+                                        if(num == -29)
+                                        {
+                                            d1 = document.getElementById("display").innerHTML;
+                                            d1 = Math.sqrt(d1);
+
+                                            document.getElementById("display").innerHTML = d1;
+                                        }
+                                        else
+                                        {
+                                            if(num == -30)
+                                            {
+                                                d1 = document.getElementById("display").innerHTML;
+                                                d1 = d1 * d1;
+
+                                                document.getElementById("display").innerHTML = d1;
+                                            }
+                                            else
+                                            {
+                                                if(num == -33)
+                                                {
+                                                    d1 = document.getElementById("display").innerHTML;
+                                                    d1 = 1/d1;
+
+                                                    document.getElementById("display").innerHTML = d1;
+
+                                                }
+                                                else
+                                                {
+                                                    if(num == -31)
+                                                    {
+                                                        d1 = document.getElementById("display").innerHTML;
+                                                        d1 = 0 - d1;
+
+                                                        document.getElementById("display").innerHTML = d1;
+                                                    }
+                                                    else
+                                                    {
+                                                        if(num == -32)
+                                                        {
+                                                            d1 = document.getElementById("display").innerHTML;
+
+                                                            document.getElementById("display").innerHTML = d1 + "." ;
+                                                        }
+                                                        else
+                                                        {
+
+                                                            if(num == -22)
+                                                            {
+                                        
+                                                                if(document.getElementById("display2").innerHTML == "+")
+                                                                {
+                                                                    var x = document.getElementById("display3").innerHTML;
+                                                                    x = x * 1;
+                                                                    
+                                                                    var y = document.getElementById("display").innerHTML;
+                                                                    y = y * 1;
+                                                
+                                                                    var z = x + y;
+                                                
+                                                                    document.getElementById("display").innerHTML = z;
+                                                
+                                                                    document.getElementById("display3").innerHTML = "";
+                                                                    document.getElementById("display2").innerHTML = "";
+                                                
+                                                                }
+                                                                else
+                                                                {
+                                        
+                                                                }
+                                                
+                                                                if(document.getElementById("display2").innerHTML == "-")
+                                                                {
+                                                                    var x = document.getElementById("display3").innerHTML;
+                                                                    x = x * 1;
+                                                                    
+                                                                    var y = document.getElementById("display").innerHTML;
+                                                                    y = y * 1;
+                                                
+                                                                    var z = x - y;
+                                                
+                                                                    document.getElementById("display").innerHTML = z;
+                                                
+                                                                    document.getElementById("display3").innerHTML = "";
+                                                                    document.getElementById("display2").innerHTML = "";
+                                                
+                                                                }
+                                                
+                                                                if(document.getElementById("display2").innerHTML == "*")
+                                                                {
+                                                                    var x = document.getElementById("display3").innerHTML;
+                                                                    x = x * 1;
+                                                                    
+                                                                    var y = document.getElementById("display").innerHTML;
+                                                                    y = y * 1;
+                                                
+                                                                    var z = x * y;
+                                                
+                                                                    document.getElementById("display").innerHTML = z;
+                                                
+                                                                    document.getElementById("display3").innerHTML = "";
+                                                                    document.getElementById("display2").innerHTML = "";
+                                                
+                                                                }
+                                                                else
+                                                                {
+                                                
+                                                                }
+                                                
+                                                                if(document.getElementById("display2").innerHTML == "/")
+                                                                {
+                                                                    var x = document.getElementById("display3").innerHTML;
+                                                                    x = x * 1;
+                                                                    
+                                                                    var y = document.getElementById("display").innerHTML;
+                                                                    y = y * 1;
+                                                
+                                                                    var z = x / y;
+                                                
+                                                                    document.getElementById("display").innerHTML = z;
+                                                
+                                                                    document.getElementById("display3").innerHTML = "";
+                                                                    document.getElementById("display2").innerHTML = "";
+                                                
+                                                                }
+                                                                else
+                                                                {
+                                                                    
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+                                                                if(document.getElementById("display").innerHTML >= 0)
+                                                                {
+                                                                    x = document.getElementById("display").innerHTML;
+                                                    
+                                                            
+                                                                    x = x * 10;
+                                                                    x = x + num;
+                                                            
+                                                                    document.getElementById("display").innerHTML = x ;
+                                                                }
+                                                                else
+                                                                {
+                                                                    x = document.getElementById("display").innerHTML;
+                                                    
+                                                            
+                                                                    x = x * 10;
+                                                                    x = x - num;
+                                                            
+                                                                    document.getElementById("display").innerHTML = x ;
+                                                                }
+
+
+                                                            }
+                                                        }
+
+
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
-                                }
+
+
+
+
+                                    
                                 
                             
                             
