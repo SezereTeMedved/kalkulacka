@@ -6,8 +6,8 @@ $data = $_POST["data"];
 ​
 $spojeni = mysqli_connect(dbhost, dbuser, dbpass, dbname);
 ​
-mysqli_query($spojeni, "INSERT INTO 3ep_sk2_ajax (data) VALUES ('$data')");
-$pocet = mysqli_query($spojeni, "SELECT data FROM 3ep_sk2_ajax");
+mysqli_query($spojeni, "INSERT INTO kalkulačka VALUES ('$data')");
+$pocet = mysqli_query($spojeni, "SELECT data FROM kalkulačka);
 
 $pocet = $pocet + 1;
 
