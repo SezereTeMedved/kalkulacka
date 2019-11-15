@@ -199,32 +199,11 @@ function cislo(num)
                                                             }
                                                             else
                                                             {
-                                                                if(document.getElementById("display").innerHTML >= 0)
-                                                                {
-                                                                    x = document.getElementById("display").innerHTML;
-                                                    
-                                                            
-                                                                    x = x * 10;
-                                                                    x = x + num;
-                                                            
-                                                                    document.getElementById("display").innerHTML = x ;
-                                                                }
-                                                                else
-                                                                {
-                                                                    x = document.getElementById("display").innerHTML;
-                                                    
-                                                            
-                                                                    x = x * 10;
-                                                                    x = x - num;
-                                                            
-                                                                    document.getElementById("display").innerHTML = x ;
-                                                                }
-
+                                                                num = String(num);
+                                                                document.getElementById("display").innerHTML = document.getElementById("display").innerHTML + num;
 
                                                             }
                                                         }
-
-
                                                         }
                                                     }
                                                 }
