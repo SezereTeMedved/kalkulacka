@@ -7,62 +7,63 @@ $spojeni = mysqli_connect(dbhost, dbuser, dbpass, dbname);
 $all = mysqli_query($spojeni, "SELECT * FROM kalkulačka");
 $table = mysqli_fetch_assoc($all);
 
+
 if($data == "1")
 {
-    $pocet = $table['jedna'] + 1;
-    mysqli_query($spojeni, "UPDATE kalkulačka SET 'jedna' = '$pocet'");
+    $pocet = $table['1'] + 1;
+    mysqli_query($spojeni, "UPDATE kalkulačka SET `1` = '$pocet'");
 }
 elseif($data == "2")
 {
-    $pocet = $table['dva'] + 1;
-    mysqli_query($spojeni, "UPDATE kalkulačka SET 'dva' = '$pocet'");
+    $pocet = $table['2'] + 1;
+    mysqli_query($spojeni, "UPDATE kalkulačka SET `2` = '$pocet'");
 }
 elseif($data == "3")
 {
-    $pocet = $table['tri'] + 1;
-    mysqli_query($spojeni, "UPDATE kalkulačka SET 'tri' = '$pocet'");
+    $pocet = $table['3'] + 1;
+    mysqli_query($spojeni, "UPDATE kalkulačka SET `3` = '$pocet'");
 }
 elseif($data == "4")
 {
-    $pocet = $table['ctyri'] + 1;
-    mysqli_query($spojeni, "UPDATE kalkulačka SET 'ctyri' = '$pocet'");
+    $pocet = $table['4'] + 1;
+    mysqli_query($spojeni, "UPDATE kalkulačka SET `4` = '$pocet'");
 }
 elseif($data == "5")
 {
-    $pocet = $table['pet'] + 1;
-    mysqli_query($spojeni, "UPDATE kalkulačka SET 'pet' = '$pocet'");
+    $pocet = $table['5'] + 1;
+    mysqli_query($spojeni, "UPDATE kalkulačka SET `5` = '$pocet'");
 }
 elseif($data == "6")
 {
-    $pocet = $table['sest'] + 1;
-    mysqli_query($spojeni, "UPDATE kalkulačka SET 'sest' = '$pocet'");
+    $pocet = $table['6'] + 1;
+    mysqli_query($spojeni, "UPDATE kalkulačka SET `6` = '$pocet'");
 }
 elseif($data == "7")
 {
-    $pocet = $table['sedm'] + 1;
-    mysqli_query($spojeni, "UPDATE kalkulačka SET 'sedm' = '$pocet'");
+    $pocet = $table['7'] + 1;
+    mysqli_query($spojeni, "UPDATE kalkulačka SET `7` = '$pocet'");
 }
 elseif($data == "8")
 {
-    $pocet = $table['osm'] + 1;
-    mysqli_query($spojeni, "UPDATE kalkulačka SET 'osm' = '$pocet'");
+    $pocet = $table['8'] + 1;
+    mysqli_query($spojeni, "UPDATE kalkulačka SET `8` = '$pocet'");
 }
 elseif($data == "9")
 {
-    $pocet = $table['devet'] + 1;
-    mysqli_query($spojeni, "UPDATE kalkulačka SET 'devet' = '$pocet'");
+    $pocet = $table['9'] + 1;
+    mysqli_query($spojeni, "UPDATE kalkulačka SET `9` = '$pocet'");
 }
 elseif($data == "0")
 {
-    $pocet = $table['nula'] + 1;
-    mysqli_query($spojeni, "UPDATE kalkulačka SET 'nula' = '$pocet'");
+    $pocet = $table['0'] + 1;
+    mysqli_query($spojeni, "UPDATE kalkulačka SET `0` = '$pocet'");
 }
 
 $all = mysqli_query($spojeni, "SELECT * FROM kalkulačka");
 $table = mysqli_fetch_assoc($all);
 
 $json = '{"data":[';
-    $json .= '"' . $table["nula"] . '","' . $table["jedna"] . '","' . $table["dva"] . '","' . $table["tri"] . '","' . $table["ctyri"] . '","' . $table["pet"] . '","' . $table["sest"] . '","' . $table["sedm"] . '","' . $table["osm"] . '","' . $table["devet"] . '"';
+    $json .= '"' . $table["0"] . '","' . $table["1"] . '","' . $table["2"] . '","' . $table["3"] . '","' . $table["4"] . '","' . $table["5"] . '","' . $table["6"] . '","' . $table["7"] . '","' . $table["8"] . '","' . $table["9"] . '"';
     $json .= ']}';
     
-    echo $json; 
+    echo $json;

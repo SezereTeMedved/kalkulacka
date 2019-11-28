@@ -1,20 +1,31 @@
 function cislo(num)
 {
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "odeslat.php", true);
-    xhr.onreadystatechange = function() {
-        if(this.readyState == 4 && this.status == 200){
-            let odpoved = JSON.parse(this.responseText)["data"];
-            odpoved = odpoved.map(Number);
-            let odpovedi = Math.max(...odpoved);
-            let cislo = odpoved.indexOf(odpovedi);
-            let tabulka = cislo + " bylo stisknuto nejvícekrát (" + odpovedi + ")";
-            document.getElementById("vystup").innerHTML = tabulka;
-        }
-    };
 
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhr.send("data=" + num);
+
+    if(num >= 0 && num <= 9)
+    {
+        var number = toString(num);
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "odeslat.php", true);
+        xhr.onreadystatechange = function() {
+            if(this.readyState == 4 && this.status == 200){
+                let odpoved = JSON.parse(this.responseText)["data"];
+                odpoved = odpoved.map(Number);
+                let odpovedi = Math.max(...odpoved);
+                let cislo = odpoved.indexOf(odpovedi);
+                let tabulka = cislo + " bylo stisknuto nejvícekrát (" + odpovedi + ")";
+                document.getElementById("vystup").innerHTML = tabulka;
+            }       
+        };
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        document.getElementById("brum").innerHTML = ("data=" + num);
+
+        xhr.send(document.getElementById("brum").innerHTML);
+    }
+
+
 
 
 
